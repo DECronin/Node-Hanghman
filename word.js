@@ -11,3 +11,11 @@
 //(the second function defined in Letter.js)
 
 //should only require Letter.js
+
+
+
+// retrieve letter
+// var currentWord {
+//    arracy = [new letter objects],
+//    func() return string representing word display ~~ call function for each letter(first func in letters file),
+//    func(guess) ~~ second function in letter file to see if correct or not}
