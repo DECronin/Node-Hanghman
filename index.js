@@ -3,13 +3,15 @@
 // Prompts the user for each guess and keeps track of the user's remaining guesses
 
 
+// create word array
 //count number of guesses
 //retrieve random word from array
-//display word in blanks ==== from letters?
-//retrieve guess
-//compare guess
-//display and decrement gueses count(?)
-//update display and count with each guess
+//////// send word to contstructor for display and comparisons
+/////////////display word in blanks ==== from letters?
+//////////////retrieve guess
+////////////compare guess
+////////////display and decrement gueses count(?)
+//update display and count with each guess (count in letters func?)
 //new word/round when no more blanks or guesscount hits 0
 //new game when all words in array have commenced
 /////////// offer new game retrieval?
