@@ -5,7 +5,7 @@
 
 //count number of guesses
 //retrieve random word from array
-//display word in blanks\
+//display word in blanks ==== from letters?
 //retrieve guess
 //compare guess
 //display and decrement gueses count(?)

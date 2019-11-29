@@ -13,3 +13,17 @@
 //updating the stored boolean value to true if it was guessed correctly
 
 //should not require any other files.
+
+
+
+
+// recieve guess, incorrects and word
+// compare guess to word
+// return new strings of display, incorrects and decremented guess value(0v1?)
+
+
+// var string letter\
+// var boolean hasBeenGuessed
+// func () return letter-display if true else "_"
+/////////////////// space === space so that strings will only compare letters but still qualify with spaces
+// func (letter) check to underlying word's letters ~~~ updating boolean value if correctly guessed 
