@@ -11,17 +11,23 @@ let guestcount = 8;
 
 function roundWord(i){
     if(i < words.length){
-
+        
+        roundWord(i++);
     } else {
         endGame();
     }
+}
+
+function startGame(){   
+    shuffle(words)
+    roundWord(0);
 }
 
 function endGame(){
     console.log(`~!~ Game Over ~!~`)
 }
 
-roundWord(0)
+startGame();
 // create word array
 //count number of guesses
 //retrieve random word from array
