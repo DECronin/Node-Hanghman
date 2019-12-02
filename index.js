@@ -3,6 +3,25 @@
 // Prompts the user for each guess and keeps track of the user's remaining guesses
 
 
+const Word = require('./word');
+const inquirer = require('inquirer');
+const words = [];
+
+let guestcount = 8;
+
+function roundWord(i){
+    if(i < words.length){
+
+    } else {
+        endGame();
+    }
+}
+
+function endGame(){
+    console.log(`~!~ Game Over ~!~`)
+}
+
+roundWord(0)
 // create word array
 //count number of guesses
 //retrieve random word from array
