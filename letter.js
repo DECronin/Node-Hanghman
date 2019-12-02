@@ -14,9 +14,14 @@
 
 //should not require any other files.
 
+class Letter {
+    constructor (letter) {
+        this.letter = letter;
+    }
+}
 
 
-
+module.exports = Letter
 // recieve guess, incorrects and word
 // compare guess to word
 // return new strings of display, incorrects and decremented guess value(0v1?)

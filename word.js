@@ -16,10 +16,11 @@ const letter = require('./letter');
 
 class Word {
     constructor (currentWord) {
-
+        this.word = currentWord;
     }
 }
 
+module.exports = Word;
 // retrieve letter
 // var currentWord {
 //    arracy = [new letter objects],

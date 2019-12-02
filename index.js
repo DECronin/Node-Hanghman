@@ -11,6 +11,7 @@ let guestcount = 8;
 
 function roundWord(i){
     if(i < words.length){
+        ;
         
         roundWord(i++);
     } else {
