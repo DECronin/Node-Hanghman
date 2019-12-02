@@ -12,7 +12,13 @@
 
 //should only require Letter.js
 
+const letter = require('./letter');
 
+class Word {
+    constructor (currentWord) {
+
+    }
+}
 
 // retrieve letter
 // var currentWord {
