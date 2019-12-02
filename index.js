@@ -11,8 +11,8 @@ let guestcount = 8;
 
 function roundWord(i){
     if(i < words.length){
-        ;
-        
+        let newWord = new Word(words[i]);
+        // newWord.//////////////////////////////////////////////////////////////////////////////
         roundWord(i++);
     } else {
         endGame();
@@ -20,12 +20,19 @@ function roundWord(i){
 }
 
 function startGame(){   
-    shuffle(words)
+    shuffle(words, words.length - 1)
     roundWord(0);
 }
 
 function endGame(){
     console.log(`~!~ Game Over ~!~`)
+}
+
+function shuffle(a, i) {
+    for (i > 0; i--;) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
 }
 
 startGame();

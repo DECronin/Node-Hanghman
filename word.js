@@ -18,6 +18,14 @@ class Word {
     constructor (currentWord) {
         this.word = currentWord;
     }
+    display(){
+        let temp = [];
+        this.word.split('');
+        for (let i = 0; i < this.word.length; i++) {
+            temp.push(new Letter (this.word[i]));
+        }
+        this.word = temp
+    }
 }
 
 module.exports = Word;
