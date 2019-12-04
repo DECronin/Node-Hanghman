@@ -28,7 +28,6 @@ function letterPlay(w, i){
             a = a.guess.toUpperCase()
             if (letters.match(a)){
                 w.validate(a);
-                console.log(w);
                 full.match(a) ? '' : guestcount--;
             } else {
                 console.log(`\n~!~ Please provide a valid character from the English Alphabet ~!~\n`);
