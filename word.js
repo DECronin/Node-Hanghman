@@ -13,14 +13,15 @@ class Word {
         this.word = temp
     }
     displayString(){
-        let blanks = "";
-        this.forEach(e => {
-            blanks += e.display();
+        let blanks = [];
+        this.word.forEach(e => {
+            blanks.push(e.display());
         });
         return blanks;
     }
     validate(g){
-        this.forEach(e => {
+        this.word.forEach(e => {
+            console.log(`e-${e.char} ==== g-${g}`);
             e.comparison(g);
         });
     }

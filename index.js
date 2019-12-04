@@ -1,44 +1,48 @@
 const Word = require('./word');
 const inquirer = require('inquirer');
-const words = [];
-const letters = /^[A-Za-z]+$/;
+const words = ["dog", 'cat', 'horse', 'snake', 'squirel', 'bird', 'fish'];
+// const letters = /^[A-Za-z]+$/;
 let guestcount = 8;
 
 function roundWord(i){
     if(i < words.length){
         let newWord = new Word(words[i]);
         newWord.toArray();
-        letterPlay(newWord);
-        roundWord(i++);
+        letterPlay(newWord, i);
     } else {
         endGame();
     }
 }
 
-function letterPlay(w){
+function letterPlay(w, i){
     console.log(`Current Word:\n${w.displayString()}\n\nRemaining Guesses: ${guestcount}`);
-    if(guestcount > 0 && w.displayString().includes(`_`)){
+    if(guestcount > 0){
         inquirer.prompt([{
             type: 'input',
             name: 'guess',
             message: 'Type your letter-guess:'
         }]).then(function(a){
-            if (a.match(letters)){
-                w.validate(a.toUpperCase());
-                w.inclides(a.toUpperCase()) ? '' : guestcount--;
-            } else {
-                console.log(`Please provide a valid character from the English Alphabet.`);
-            }
+            // console.log(letters)
+            // if (letters.match(a)){
+                a = a.guess.toUpperCase()
+                w.validate(a);
+                // w.includes(a) ? '' : guestcount--;
+            // } else {
+                // console.log(`Please provide a valid character from the English Alphabet.`);
+            // }
+            console.log(w);
             letterPlay(w)
         })
     } else {
         guestcount = 8;
         console.log(`Your word was: ${w.word}`);
+        roundWord(i++);
     }
 }
 
 function startGame(){   
-    shuffle(words, words.length - 1)
+    shuffle(words, words.length);
+    console.log(words);
     roundWord(0);
 }
 
@@ -52,5 +56,4 @@ function shuffle(a, i) {
         [a[i], a[j]] = [a[j], a[i]];
     }
 }
-
 startGame();
