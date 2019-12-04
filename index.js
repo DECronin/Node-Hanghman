@@ -16,7 +16,7 @@ function roundWord(i){
 
 function letterPlay(w, i){
     console.log(`Current Word:\n${w.displayString()}\n\nRemaining Guesses: ${guestcount}`);
-    if(guestcount > 0){
+    if(guestcount > 0 && w.displayString().match(' _')){
         inquirer.prompt([{
             type: 'input',
             name: 'guess',
@@ -35,7 +35,9 @@ function letterPlay(w, i){
         })
     } else {
         guestcount = 8;
-        console.log(`Your word was: ${w.word}`);
+        let full = '';
+        w.word.forEach(e => {full += e.char});
+        console.log(`Your word was: ${full}`);
         roundWord(i++);
     }
 }
