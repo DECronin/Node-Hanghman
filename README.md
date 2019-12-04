@@ -6,6 +6,6 @@
 #### Instructions:
 
 #### Demonstration:
-![7-rounds_demo](./)
+![7-rounds_demo](./demo1.gif)
 
 #### Technologies & Resources Used:
