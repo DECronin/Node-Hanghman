@@ -58,3 +58,5 @@ function shuffle(a, i) {
     }
 }
 startGame();
+
+//I do not currently have anything keeping the guesscount from decrementing if the same wrong-letter is guessed again
