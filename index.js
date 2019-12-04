@@ -17,6 +17,8 @@ function roundWord(i){
 
 function letterPlay(w, i){
     console.log(`Current Word:\n${w.displayString()}\n\nRemaining Guesses: ${guestcount}`);
+    let full = '';
+    w.word.forEach(e => {full += e.char});
     if(guestcount > 0 && w.displayString().match(' _')){
         inquirer.prompt([{
             type: 'input',
@@ -26,7 +28,8 @@ function letterPlay(w, i){
             a = a.guess.toUpperCase()
             if (letters.match(a)){
                 w.validate(a);
-                // w.includes(a) ? '' : guestcount--;
+                console.log(w);
+                full.match(a) ? '' : guestcount--;
             } else {
                 console.log(`\n~!~ Please provide a valid character from the English Alphabet ~!~\n`);
             }
@@ -34,8 +37,6 @@ function letterPlay(w, i){
         })
     } else {
         guestcount = 8;
-        let full = '';
-        w.word.forEach(e => {full += e.char});
         console.log(`Your word was: ${full}`);
         roundWord(i + 1);
     }
