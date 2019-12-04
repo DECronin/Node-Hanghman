@@ -5,14 +5,14 @@
 
 #### Instructions:
 1) Navigate to Game's Directory on your local devise 
-  * *  _Make sure to have Node and Inquirer initialized and installed (links provided)_
+  **  _Make sure to have Node and Inquirer initialized and installed (links provided)_
 2) "node index.js" + _Enter_ into command line
 3) Play Game
-  * * Provide a letter to fill in the blanks of the word
-  * * Once all blanks are filled in or you run out of guesses the next round begins
-  * * You have 8 Incorrect-Guess chances 
-  * * * _(correct letters and forine characters do not count against you)_
-  * * * * _(currently: repeating the same incorrect-letter will count against you)_
+  ** Provide a letter to fill in the blanks of the word
+  ** Once all blanks are filled in or you run out of guesses the next round begins
+  ** You have 8 Incorrect-Guess chances 
+  *** _(correct letters and forine characters do not count against you)_
+  **** _(currently: repeating the same incorrect-letter will count against you)_
 
 #### Demonstration:
 ![7-rounds_demo](./demo1.gif)
