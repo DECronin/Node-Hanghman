@@ -5,6 +5,7 @@ const words = ["dog", 'cat', 'horse', 'snake', 'squirel', 'bird', 'fish'];
 let guestcount = 8;
 
 function roundWord(i){
+    console.log(`round: ${i} ~~~~~~~~~~~~ ${words.length}`);
     if(i < words.length){
         let newWord = new Word(words[i]);
         newWord.toArray();
@@ -15,7 +16,7 @@ function roundWord(i){
 }
 
 function letterPlay(w, i){
-    console.log(`Current Word:\n${w.displayString()}\n\nRemaining Guesses: ${guestcount}`);
+    console.log(`Current Word:\n${w.displayString()}\n\nRemaining Guesses: ${guestcount}}`);
     if(guestcount > 0 && w.displayString().match(' _')){
         inquirer.prompt([{
             type: 'input',
@@ -31,14 +32,14 @@ function letterPlay(w, i){
                 // console.log(`Please provide a valid character from the English Alphabet.`);
             // }
             console.log(w);
-            letterPlay(w)
+            letterPlay(w, i)
         })
     } else {
         guestcount = 8;
         let full = '';
         w.word.forEach(e => {full += e.char});
         console.log(`Your word was: ${full}`);
-        roundWord(i++);
+        roundWord(i + 1);
     }
 }
 
