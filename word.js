@@ -21,7 +21,6 @@ class Word {
     }
     validate(g){
         this.word.forEach(e => {
-            console.log(`e-${e.char} ==== g-${g}`);
             e.comparison(g);
         });
     }
