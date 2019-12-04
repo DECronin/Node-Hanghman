@@ -1,6 +1,6 @@
 class Letter {
     constructor (letter) {
-        this.char = letter;
+        this.char = letter.toUpperCase();
         this.pastGuess = false;
     }
     display(){
