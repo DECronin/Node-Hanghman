@@ -1,6 +1,6 @@
 const Word = require('./word');
 const inquirer = require('inquirer');
-const words = ["dog", 'cat', 'horse', 'snake', 'squirel', 'bird', 'fish'];
+const words = ["dog", 'cat', 'horse', 'snake', 'squirrel', 'bird', 'fish'];
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let guestcount = 8;
 
