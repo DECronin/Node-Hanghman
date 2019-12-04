@@ -11,7 +11,7 @@
    * Provide a letter to fill in the blanks of the word
    * Once all blanks are filled in or you run out of guesses the next round begins
    * You have 8 Incorrect-Guess chances 
-     - _(correct letters and forine characters do not count against you)_
+     - _(correct letters and foreign characters do not count against you)_
      - _(currently: repeating the same incorrect-letter will count against you)_
 
 #### Demonstration:
