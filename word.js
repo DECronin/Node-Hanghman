@@ -13,9 +13,9 @@ class Word {
         this.word = temp
     }
     displayString(){
-        let blanks = [];
+        let blanks = '';
         this.word.forEach(e => {
-            blanks.push(e.display());
+            blanks += (e.display());
         });
         return blanks;
     }

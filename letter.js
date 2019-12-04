@@ -4,10 +4,13 @@ class Letter {
         this.pastGuess = false;
     }
     display(){
-        switch (this){
-            case this.char === " ": return " "; break;
-            case this.pastGuess: return this.char; break;
-            default: return "_"        }
+        if(this.char === " "){
+            return " "
+        } else if (this.pastGuess == true){
+            return ` ${this.char}`
+        } else {
+            return " _" 
+        }
     }
     comparison(guess){
         (guess === this.char || this.char === " ") ? this.pastGuess = true : '';
