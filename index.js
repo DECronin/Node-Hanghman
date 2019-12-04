@@ -5,8 +5,8 @@ const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let guestcount = 8;
 
 function roundWord(i){
-    console.log(`round: ${i + 1}/${words.length}`);
     if(i < words.length){
+        console.log(`Round: ${i + 1}/${words.length}`);
         let newWord = new Word(words[i]);
         newWord.toArray();
         letterPlay(newWord, i);
