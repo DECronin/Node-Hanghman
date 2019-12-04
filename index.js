@@ -12,10 +12,29 @@ let guestcount = 8;
 function roundWord(i){
     if(i < words.length){
         let newWord = new Word(words[i]);
-        // newWord.//////////////////////////////////////////////////////////////////////////////
+        newWord.toArray();
+        letterPlay(newWord);
         roundWord(i++);
     } else {
         endGame();
+    }
+}
+
+function letterPlay(w){
+    console.log(`${w.displayString()}`);
+    if(guestcount > 0 && w.displayString().includes(`_`)){
+        inquirer.prompt([{
+            type: 'input',
+            name: 'guess',
+            message: 'Type your letter-guess:'
+        }]).then(function(a){
+
+        })
+    } else {
+        // display full word
+        // check if all words have been done
+            //next word
+            //end game
     }
 }
 

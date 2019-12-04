@@ -10,7 +10,7 @@ class Letter {
             default: return "_"        }
     }
     comparison(guess){
-        if (guess === this.char || this.char === " ") {this.pastGuess = true}
+        (guess === this.char || this.char === " ") ? this.pastGuess = true : '';
     }
 }
 
